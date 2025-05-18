@@ -13,8 +13,8 @@ st.markdown(
     .stApp {background-color: #f5e6cc; color: #111 !important;}
     .big-header {color: #111 !important; font-size: 2.2em; font-weight: bold;}
     .section-header {color: #111 !important; font-size: 1.3em; font-weight: bold; margin-top: 1em;}
-    .stButton > button {color: #111 !important;}
-    .stDownloadButton > button {color: #111 !important;}
+    .stButton > button {color: #fff !important;}
+    .stDownloadButton > button {color: #fff !important;}
     .stTabs [data-baseweb="tab"] {color: #111 !important;}
     .stSlider > label, .stSelectbox > label, label {color: #111 !important;}
     </style>
