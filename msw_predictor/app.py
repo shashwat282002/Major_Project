@@ -59,9 +59,9 @@ with tab1:
 
     # Pass a dummy value for msw to match scaler's expected input shape
     # Only use the first two scaled values for model input
-    with open('xgb_msw_model.pkl', 'rb') as f:
+    with open('msw_predictor/xgb_msw_model.pkl', 'rb') as f:
         model = pickle.load(f)
-    with open('scaler.pkl', 'rb') as f:
+    with open('msw_predictor/scaler.pkl', 'rb') as f:
         scaler = pickle.load(f)
     scaled_vals = scaler.transform([[population, gdp, 0]])
     scaled_population = scaled_vals[0][0]
