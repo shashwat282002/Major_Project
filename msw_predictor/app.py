@@ -44,14 +44,39 @@ with tab1:
     )
 
     # UI for input with sliders and help text
-    col1, col2 = st.columns(2)
-    with col1:
-        population = st.slider("Population", min_value=0, max_value=100_000_000, value=1_000_000, step=1000, help="Enter the total population of the country.")
+    # Set initial/default value for population
+    default_population = 1_000_000.0
 
-    # Set initial/default value
+    # Create two columns: one for slider, one for manual input for Population
+    pop_col1, pop_col2 = st.columns(2)
+
+    with pop_col1:
+        population_slider = st.slider(
+            "Population (use slider)",
+            min_value=0.0,
+            max_value=100_000_000.0,
+            value=default_population,
+            step=1.0,
+            key="population_slider"
+        )
+
+    with pop_col2:
+        population_input = st.number_input(
+            "Population (or type manually)",
+            min_value=0.0,
+            max_value=100_000_000.0,
+            value=population_slider,
+            step=1.0,
+            key="population_input"
+        )
+
+    # Sync: If the user changes the slider, update the input, and vice versa
+    population = population_input if population_input != population_slider else population_slider
+
+    # Set initial/default value for GDP
     default_gdp = 10000.0
 
-    # Create two columns: one for slider, one for manual input
+    # Create two columns: one for slider, one for manual input for GDP
     col3, col4 = st.columns(2)
 
     with col3:
@@ -75,7 +100,6 @@ with tab1:
         )
 
     # Sync: If the user changes the slider, update the input, and vice versa
-    # (Streamlit doesn't natively sync widgets, so pick the latest value)
     gdp = gdp_input if gdp_input != gdp_slider else gdp_slider
 
     income_id = st.selectbox("Income Class", ["HIC", "LIC", "LMC", "UMC"], help="Select the income class as per World Bank classification.")
