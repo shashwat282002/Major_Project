@@ -36,7 +36,7 @@ tab1, tab2, tab3 = st.tabs(["Prediction", "About", "Contact"])
 
 with tab1:
     st.markdown('<div class="big-header">♻️ Municipal Solid Waste (MSW) Predictor</div>', unsafe_allow_html=True)
-    st.image("https://images.unsplash.com/photo-1508873699372-7aeab60b44c9?auto=format&fit=crop&w=800&q=80", use_container_width=True, caption="Municipal Solid Waste Management")
+    st.image("Solid_waste.jpeg", use_container_width=True, caption="Municipal Solid Waste Management")
     st.markdown(
         """
         Enter the details below to predict **annual municipal solid waste (MSW) generation** for a country.
