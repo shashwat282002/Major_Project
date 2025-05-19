@@ -27,8 +27,15 @@ st.sidebar.title("About This App")
 st.sidebar.info(
     "This app predicts annual municipal solid waste (MSW) generation for a country based on population, GDP, and income class.\n\nCreated by Shashwat Bindal & Priyanshu, Delhi Technological University."
 )
-st.sidebar.markdown("[View Project Report](#)")
-st.sidebar.markdown("---")
+with open("Plag_research_project.pdf", "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
+
+st.sidebar.download_button(
+    label="Download Project Report",
+    data=PDFbyte,
+    file_name="Plag_research_project.pdf",
+    mime='application/octet-stream'
+)st.sidebar.markdown("---")
 st.sidebar.markdown("**Contact:** shashwatbindal@gmail.com")
 
 # Tabs for organization
