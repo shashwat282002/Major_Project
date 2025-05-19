@@ -35,8 +35,10 @@ st.sidebar.download_button(
     data=PDFbyte,
     file_name="Plag_research_project.pdf",
     mime='application/octet-stream'
-)st.sidebar.markdown("---")
-st.sidebar.markdown("**Contact:** shashwatbindal@gmail.com")
+)
+
+st.sidebar.markdown("---")
+st.sidebar.markdown("**Contact:** shashwat.bindal2002@gmail.com")
 
 # Tabs for organization
 tab1, tab2, tab3 = st.tabs(["Prediction", "About", "Contact"])
@@ -207,9 +209,9 @@ with tab2:
     - Learn fun facts about waste management
     """)
     st.write("**Developed by:** Shashwat Bindal & Priyanshu, Delhi Technological University")
-    st.write("**Contact:** shashwatbindal@gmail.com")
+    st.write("**Contact:** shashwat.bindal2002@gmail")
 
 with tab3:
     st.markdown('<div class="big-header">Contact</div>', unsafe_allow_html=True)
-    st.write("For questions, suggestions, or collaborations, please email: shashwatbindal@gmail.com")
+    st.write("For questions, suggestions, or collaborations, please email: shashwat.bindal2002@gmail")
     st.write("[LinkedIn](https://www.linkedin.com/) | [GitHub](https://github.com/)") 
